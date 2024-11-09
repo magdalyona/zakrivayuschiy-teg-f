@@ -61,6 +61,7 @@
 
 .sparks {
     fill: transparent;
+    opacity: 0;
 }
 
 /* .like-icon {
