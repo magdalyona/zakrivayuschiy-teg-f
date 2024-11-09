@@ -96,10 +96,6 @@
   transition: opacity 0.3s ease;
 }
 
-.theme-menu__button:hover {
-  opacity: 0.6;
-}
-
 .theme-menu__button:focus {
   opacity: 0.6;
   outline: none;
@@ -107,6 +103,10 @@
 
 .theme-menu__button:focus::after {
   scale: 1;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
 }
 
 .theme-menu__button:disabled {
@@ -132,7 +132,7 @@
   inset-inline-start: 0px;
   bottom: -3px;
   transition: scale 0.3s ease;
-  scale: 0px;
+  scale: 0;
 }
 
 .main {
@@ -210,10 +210,10 @@
   top: 25px;
 }
  
-@media (width <= 375px) {
+@media (width <= 376px) {
   .card__image-label {
-    right: 25px;
-    top: 13px;
+    right: 11px;
+    top: 25px;
   }
 }
 
@@ -238,6 +238,12 @@
   /* gap: 27px; */
 }
 
+@media (width <= 376px) {
+  .card__description {
+  padding: 22px 26px 0px;
+}
+}
+
 .card__text {
   margin-bottom: 25px;
 }
@@ -246,10 +252,16 @@
   margin-bottom: 0px;
 }
 
+@media (width <= 376px) {
+  .card__text:last-of-type {
+  margin-bottom: 26px;
+}
+}
+
 .card__button-box {
   display: flex;
   justify-content: flex-end;
-  gap: 4px;
+  gap: 3px;
   padding: 0px 25px 25px 0px;
   /* margin-bottom: 25px; */
 
@@ -259,11 +271,13 @@
 .card__icon-button {
   max-block-size: 38px;
   position: relative;
-  display: flex;
-  padding: 2px 0px 0px 3px;
+  display: grid;
+
+  /* padding: 2px 0px 0px 3px; */
+
   border: 2px solid transparent; 
   background-color: transparent;
-  transition: border 0.3s ease; 
+  transition: border-color 0.3s ease; 
 }
 
 .card__icon-button:focus {
@@ -271,7 +285,7 @@
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid currentColor;
+  border-color: currentColor;
 }
 
 .sparks {
@@ -332,19 +346,24 @@
   background-color: var(--color-background);
 }
 
-.content__svg {
-  color: var(--color-button);
-  mix-blend-mode: difference;
-  width: 21px;
-  height: 21px;
-}
+@media (width <= 376px) {
 
-@media (width <= 375px) {
-  .content__svg {
+  .button__svg  {
+    /* color: var(--color-button);
+    mix-blend-mode: difference; */
     width: 28px;
     height: 28px;
   }
+
+  .footer__button {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
 }
+
+
 
 .dialog {
   border: 2px solid var(--color-accent);
@@ -398,4 +417,16 @@ dialog::backdrop {
   width: 293px;
   height: 38px;
   padding: 9px 17px;
+}
+
+@media (width <= 376px) {
+  .dialog__content { 
+    gap: 10px;
+  }
+
+  .dialog__button {
+    width: 257px;
+
+  }
+
 }

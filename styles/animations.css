@@ -110,10 +110,10 @@
 
 .like-icon.is-liked .sparks {
     fill: var(--color-heart);
-    animation: stark-opacity 0.3s ease-in 0.3 alternate;
+    animation: stark-opacity 0.3s 0.3 ease-in alternate;
 }
 
 .like-icon.is-liked .heart {
     transform-origin: center;
-    animation: heart-scale 0.3s ease-in 0.1s alternate;
+    animation: heart-scale 0.3s 0.1s ease-in alternate;
 }
